@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+
+% default packages
+\usepackage[english]{babel}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{fullpage}
+\usepackage{titlesec}
+\usepackage{etoolbox, pdfpages}
+
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\setlength{\parskip}{0pt}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+\titleformat{\section}{\normalfont\fontsize{11}{15}\bfseries}{\thesection}{1em}{}
+\setlength{\baselineskip}{13pt}
+
+\usepackage{titling}
+\setlength{\droptitle}{-4em} %default
+\addtolength{\droptitle}{-4pt} %extra adjustment
+% handle multi-line title spacing
+\pretitle{\vspace{0.6\baselineskip}\begin{center}\linespread{1}}
+\posttitle{\par\end{center}}
+
+\input{packages}
+\input{style}
+
+\begin{document}
+
+% remove body header from first page
+\thispagestyle{empty}
+% header/footer just on cover page
+\AddToShipoutPicture*{\BackgroundPic}
+
+\input{coverpage}
+\clearpage
+\pagenumbering{arabic}
+
+\thispagestyle{fancy}
+% lengths need to be defined here or gets overwritten by \thispagestyle{empty} above
+\setlength{\headheight}{19.7478pt}
+\setlength{\headsep}{4pt}
+\newlength{\nsfoffset}
+\setlength{\nsfoffset}{\headheight}
+\addtolength{\nsfoffset}{\baselineskip}
+
+% to host your content
+\input{content}
+
+%\includepdf[pages=-]{figures/my-collaborators}
+
+\end{document}
