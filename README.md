@@ -1,4 +1,10 @@
-# FNAL ECA Preproposal Template
+# FNAL AI HEP Proposal
+
+Modified from ECA templates: 
+
+https://github.com/kpedro88/FNAL_ECA_Preproposal_Template 
+
+https://github.com/kpedro88/FNAL_ECA_Proposal_Template
 
 This repository facilitates the combination of user content with central style and formatting provided by FNAL.
 
