@@ -1,4 +1,4 @@
-# FNAL AI HEP Proposal
+# FNAL AI HEP Letter of Intent
 
 Modified from ECA templates: 
 
